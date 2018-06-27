@@ -9,8 +9,6 @@ podTemplate(label: 'frontend', containers: [
     stage('Build a nodejs project') {
       git 'https://github.com/HerrmannHinz/nodejs-example.git'
       container('node10') {
-          sh 'ls -lha'
-          sh 'apt-get update && apt-get install git python2.7'
           sh 'npm install'
       }
     }
