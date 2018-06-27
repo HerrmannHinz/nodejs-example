@@ -4,8 +4,6 @@
 
 podTemplate(label: 'default', containers: [
   containerTemplate(name: 'node', image: 'node:9-stretch', ttyEnabled: true, command: 'cat')
-  ],volumes: [
-   persistentVolumeClaim(mountPath: '/home/jenkins/.node-gyp', claimName: 'efs-node-gyp', readOnly: false)
   ]){
   node('default') {
     stage('Build a nodejs project') {
