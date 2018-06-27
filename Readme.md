@@ -1,8 +1,7 @@
-# Buildkite Node.js Example
+# Jenkins/Kubernetes pipeline Node.js Example
 
-[![Add to Buildkite](https://buildkite.com/button.svg)](https://buildkite.com/new)
 
-This repository is an example on how to test a [Node.js](https://nodejs.org/) project using [Buildkite](https://buildkite.com/).
+This repository is an example on how to test a [Node.js](https://nodejs.org/) project using a Jenkinspipeline in combination with the Kubernetes Plugin for Jenkins
 
 See the [Node.js Docker example](https://github.com/buildkite/nodejs-docker-example) for doing this using Docker containers.
 
