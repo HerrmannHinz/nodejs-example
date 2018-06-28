@@ -4,7 +4,7 @@
 
 podTemplate(label: 'frontend', containers: [
   containerTemplate(name: 'node10', image: 'node:10-stretch', ttyEnabled: true, command: 'cat'),
-  containerTemplate(name: 'javasomething', image: 'openjdk-8-jre-alpine', ttyEnabled: true, command: 'cat')
+  containerTemplate(name: 'javasomething', image: 'java:openjdk-8-jre-alpine', ttyEnabled: true, command: 'cat')
   ]){
   node('frontend') {
     stage('Build a nodejs project') {
