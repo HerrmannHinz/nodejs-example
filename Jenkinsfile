@@ -15,7 +15,7 @@ podTemplate(label: 'frontend', containers: [
     }
     stage('some java test') {
       container('javasomething') {
-          sh 'java --version'
+          sh 'java -version'
       }
     }
   }
