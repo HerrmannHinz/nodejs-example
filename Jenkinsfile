@@ -1,20 +1,21 @@
 /**
  * This pipeline will execute a nodejs build
+ * + output the version of the java installation (to give you the idea) 
  */
 
 podTemplate(label: 'frontend', containers: [
-  containerTemplate(name: 'node10', image: 'node:10-stretch', ttyEnabled: true, command: 'cat'),
-  containerTemplate(name: 'javasomething', image: 'java:alpine', ttyEnabled: true, command: 'cat')
+  containerTemplate(name: 'myAwesomeNodeContainer', image: 'node:10-stretch', ttyEnabled: true, command: 'cat'),
+  containerTemplate(name: 'myAwesomeJavaContainer', image: 'java:alpine', ttyEnabled: true, command: 'cat')
   ]){
   node('frontend') {
     stage('Build a nodejs project') {
       git 'https://github.com/HerrmannHinz/nodejs-example.git'
-      container('node10') {
+      container('myAwesomeNodeContainer') {
           sh 'npm install'
       }
     }
     stage('some java test') {
-      container('javasomething') {
+      container('myAwesomeJavaContainer') {
           sh 'java -version'
       }
     }
